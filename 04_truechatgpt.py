@@ -9,7 +9,11 @@ from langchain_community.vectorstores import FAISS
 from openai import OpenAI
 
 # === CONFIG ===
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") or "YOUR_REAL_KEY_HERE"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+if OPENAI_API_KEY:
+    print("[DEBUG] API-nøgle er sat korrekt.")
+else:
+    print("[DEBUG] API-nøgle er IKKE sat!")
 JSONL_FOLDER = Path("PDFer/JSONL_data")
 FAISS_STORE = Path("faiss_store")
 
