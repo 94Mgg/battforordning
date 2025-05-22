@@ -4,7 +4,7 @@ from pathlib import Path
 import streamlit as st
 from rapidfuzz import fuzz
 from langchain.schema import Document
-from langchain_community.embeddings import OpenAIEmbeddings  # Eller langchain_openai hvis nyere
+from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from openai import OpenAI
 
