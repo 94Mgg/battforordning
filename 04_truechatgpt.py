@@ -10,7 +10,7 @@ from openai import OpenAI
 
 # === CONFIG ===
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") or "YOUR_REAL_KEY_HERE"
-JSONL_FOLDER = Path(r"C:\Users\MickiGrunzig\OneDrive - Zolo International Trading\Dokumenter\Batteriforordningen chatgpt\PDFer\JSONL_data")
+JSONL_FOLDER = Path("JSONL_data")
 FAISS_STORE = Path("faiss_store")
 
 client = OpenAI(api_key=OPENAI_API_KEY)
